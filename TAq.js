@@ -1,51 +1,21 @@
-// change the value to something else for how often should the bot check the api and ping the role, time in miliseconds
 const interval = {}
-//
-
-// change the role id if you want the bot to ping other role, go to role setting, click 3 dots and click copy role and replace the number in here
 const role = ("<@&785526772913537024>")
-//
-
-// treashold when lost territory count gose above this value
 const treashold = 3;
-//
-
-//ping intervalin miliseconds
 const  pingInterval = 3600000;
-//
-
-// guild name to match; taq ofcourse
 const guild = (`\"The Aquarium\"`);
 const subguild = (`\"The FishTank\"`);
-//
-
-// discord server id
 const guildID = ("729147655875199017");
-//
-
-// the channel that the bot will send the alert msgs
 const channelID = ('729162690760671244');
-//
-
-// TAq member
 const TAqMember = ['WeaponMerchant', 'ArchoKast', 'Ghost1John', 'WoodCreature', 'ecoboom101', 'talonexstar', '1Bos', 'AaDantsi', 'Alyshu', 'Aquallous', 'Deleted_User86', 'Doctorstrange77', 'Eowaryldor', 'FPipi', 'FirmaDeny', 'Funumunuh', 'LuckLord', 'PanfriedPanda', 'RougeKnight40', 'StrxberryMochi_', 'TheLythan', 'ZockerCam', 'dooperboopers', 'muce', 'ninjakengster', 'xCqramel', 'Andixs', 'Orionid', 'ProfessorEmber', 'ToiletBro2', 'Zokapoo', 'dhth', 'sweeeeeeeeeeeeem', '6GayRatsInACoat', 'An_Old_Friendo', 'BurnieSundown', 'Cledward', 'CoIorful', 'Daccky', 'Gecko808', 'Good13055', 'Happy_sniper101', 'HateDreadDespair', 'HunkoChoco', 'JQSHEY', 'Jelkqn', 'LeviLips96', 'Magic_Poi', 'MaorBA', 'Nepttuune', 'Nivla', 'NoedelStam', 'OishiSnackTomCay', 'RedChrono', 'Seluc', 'Sydla', 'TheUlfKng', 'TrekStone', 'WindFisher', 'Wrimpy', 'Zodiarceus', 'bongin', 'ezzath', 'kirby201000', 'nietmoeder', 'salvadormarqez', 'strivver', 'xSamsung', 'xXAlexiorzXx']
-//
-
-//TAq claims
 const terr = ['Mage Island', "Santa's Hideout", "Skiens Island", "Nodguj Nation", "Icy Island", "Dujgon Nation", "Regular Island", "Maro Peaks", "Dead Island South West", "Dead Island South East", "Dead Island North West", "Dead Island North East", "Jofash Docks", "Lexdales Prison", "Corrupted Hand", "Abandoned Tower", "Path To Prison", "Shanjugin’s River", "Lexdale", "Black Magic", "Gromblins Hideout", "Banshees Cave", "Graveyard North", "Graveyard South", "Arachnida Cave", "Corrupted Village", "Abandoned Church", "Corrupted Impact", "Dark Forest Village", "Cinfras Outskirts", "Dark Forest Cinfras Transition"]
 
-// bot token, DO NOT CHANGE IF YOU DONT KNOW SHIT
-const token = ("");
-//
-
-//don't touch shit below this line                  
+const token = ("");              
 const Discord = require('discord.js');
 const { stringify } = require('querystring');
 const request = require('request');
 const { threadId } = require('worker_threads');
 const client = new Discord.Client();
 const prefix = ("!w");
-const { settings } = require('cluster');
 
 const onlineCaptain = {}
 const temp = {}
