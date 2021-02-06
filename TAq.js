@@ -56,18 +56,6 @@ client.on('message', msg => {
 	}
 });
 
-client.on('message', message => {
-	if (message.content === 'mintie') {
-		const channelEmbed = new Discord.MessageEmbed()
-			.setColor('#ff44aa')
-			.setTitle('cutie')
-		
-			for (var i = 0; i > 10; i++) {
-				message.channel.send(channelEmbed);	
-			}
-	}
-});
-
 client.on('message', msg => {
 	if (msg.content === '!w o') {
 		request(`https://api.wynncraft.com/public_api.php?action=guildStats&command=The+Aquarium`, (err, response, body) => {
@@ -77,16 +65,6 @@ client.on('message', msg => {
 			console.log(members)
 	});
 }
-});
-
-client.on('message', message => {
-	if(message.content === '!w mint') {
-		const channelEmbed = new Discord.MessageEmbed()
-			.setColor('#ff44aa')
-			.setTitle('mintie cutie :3')
-
-		message.channel.send(channelEmbed);
-	}
 });
 
 client.on('message', msg => {
