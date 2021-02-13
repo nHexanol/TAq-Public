@@ -120,15 +120,15 @@ message.channel.send(exampleEmbed);
         for (var i = 0; i < args.length; i++) {
             var cmd = cmd.concat(` ${args[i]}`);
         }
-        try {
+    try {
         eval(cmd);
 	message.react('✅');
-        }
-        catch(e) {
-	    message.react('❎');
-            e = ("```").concat('\n[ ! ]\n\n').concat(e).concat('```');
-            message.channel.send(e);
-        }
+    }
+    catch(e) {
+	message.react('❎');
+        e = ("```").concat('\n[ ! ]\n\n').concat(e).concat('```');
+        message.channel.send(e);
+    }
     }
     else if (command == 'xp') {
         // xp leaderboard
