@@ -18,25 +18,24 @@ client.on('message', message => {
     
     if (command == 'ck') {
         // stats check
-        if (args) {
+    if (args) {
         request(`https://api.wynncraft.com/v2/player/${args}/stats`, (err, response, body) => {
-				if (err) {
-				    client.guilds.cache.get('729147655875199017').channels.cache.get('748900470575071293').send(err);
-				}
-				var d = JSON.parse(body);
-				if (d.data)
-				{
+		if (err) {
+			client.guilds.cache.get('729147655875199017').channels.cache.get('748900470575071293').send(err);
+		}
+		var d = JSON.parse(body);
+		if (d.data) {
                     if (d.data[0].username) {
-				var user = JSON.stringify(d.data[0].username).replace(`"`, " ").replace(`"`, " ");
-				var guild = JSON.stringify(d.data[0].guild.name).replace(`"`, " ").replace(`"`, " ").replace('null', 'No guild').replace('null', 'No guild');
-				var guildRank = JSON.stringify(d.data[0].guild.rank).replace(`"`, " ").replace(`"`, " ").replace('null', 'No guild').replace('null', 'No guild');
-				var playtimeR = (d.data[0].meta.playtime / 60 * 4.7).toFixed(2);
-				var rank = JSON.stringify(d.data[0].meta.tag.value).replace(`"`, " ").replace(`"`, " ").replace('null', "No rank");
-				var hclassN = JSON.stringify(d.data[0].classes[0].name).replace(`"`, " ").replace(`"`, " ").toUpperCase();
-				var hclassL = d.data[0].classes[0].professions.combat.level.toFixed(0);
-				var death = d.data[0].global.deaths.toFixed(0);
-				var online = JSON.stringify(d.data[0].meta.location.online)
-				var server = JSON.stringify(d.data[0].meta.location.server)
+			var user = JSON.stringify(d.data[0].username).replace(`"`, " ").replace(`"`, " ");
+			var guild = JSON.stringify(d.data[0].guild.name).replace(`"`, " ").replace(`"`, " ").replace('null', 'No guild').replace('null', 'No guild');
+			var guildRank = JSON.stringify(d.data[0].guild.rank).replace(`"`, " ").replace(`"`, " ").replace('null', 'No guild').replace('null', 'No guild');
+			var playtimeR = (d.data[0].meta.playtime / 60 * 4.7).toFixed(2);
+			var rank = JSON.stringify(d.data[0].meta.tag.value).replace(`"`, " ").replace(`"`, " ").replace('null', "No rank");
+			var hclassN = JSON.stringify(d.data[0].classes[0].name).replace(`"`, " ").replace(`"`, " ").toUpperCase();
+			var hclassL = d.data[0].classes[0].professions.combat.level.toFixed(0);
+			var death = d.data[0].global.deaths.toFixed(0);
+			var online = JSON.stringify(d.data[0].meta.location.online)
+			var server = JSON.stringify(d.data[0].meta.location.server)
 				if (online == true || server !== 'null' ) {
 					var onServer = server.replace(`"`, " ").replace(`"`, " ");
 				}
