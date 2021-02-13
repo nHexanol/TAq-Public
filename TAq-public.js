@@ -66,8 +66,7 @@ message.channel.send(exampleEmbed);
         message.channel.send(errorEmbed);
         
                 }
-			}
-
+	}
         });
     }
     else if (!args) {
@@ -121,14 +120,13 @@ message.channel.send(exampleEmbed);
         var cmd = "";
         for (var i = 0; i < args.length; i++) {
             var cmd = cmd.concat(` ${args[i]}`);
-
         }
         try {
         eval(cmd);
-		message.react('✅');
+	message.react('✅');
         }
         catch(e) {
-			message.react('❎');
+	    message.react('❎');
             e = ("```").concat('\n[ ! ]\n\n').concat(e).concat('```');
             message.channel.send(e);
         }
@@ -222,4 +220,3 @@ client.on('message', message => {
         client.guilds.cache.get().channels.cache.get().send(`[ <#${message.channel.id}> ] [ **${message.author.username}** ] \n>> ${message.content.replace('<@', '<mention.').replace('@everyone', 'mention.everyone')}\n\n`);
     }
     });
-
