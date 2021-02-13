@@ -86,7 +86,7 @@ message.channel.send(exampleEmbed);
 				var online = JSON.stringify(d.data[0].meta.location.online)
 				var server = JSON.stringify(d.data[0].meta.location.server)
 				if (online == true || server !== 'null' ) {
-					var onServer = server.replace(`"`, " ").replace(`"`, " ").replace(`"`, " ");
+					var onServer = server.replace(`"`, " ").replace(`"`, " ");
 					var onServer = (`${args} is currently on server`).concat(onServer);
 				}
 				else {
